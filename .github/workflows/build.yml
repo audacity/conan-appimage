@@ -20,6 +20,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Build AppImage
       id: build-appimage
+      run: |
         ./build.sh
     - name: Upload AppImage    
       uses: marvinpinto/action-automatic-releases@latest
