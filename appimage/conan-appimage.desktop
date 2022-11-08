@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=conan-appimage
+Exec=conan-appimage
+Comment=AppImage version of Conan C++ package manager
+Icon=conan-appimage
+Categories=Development;
+Terminal=true

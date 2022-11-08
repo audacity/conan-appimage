@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <id>conan-appimage</id>
+    <metadata_license>MIT</metadata_license>
+    <project_license>MIT</project_license>
+    <name>conan-appimage</name>
+    <summary>AppImage version of Conan C++ package manager</summary>
+    <description>
+        <p>  AppImage version of Conan C++ package manager
+        </p>
+    </description>
+    <launchable type="desktop-id">conan-appimage.desktop</launchable>
+    <url type="homepage">https://github.com/audacity/conan-appimage</url>
+    <provides>
+        <binary>python{{ python-version }}</binary>
+    </provides>
+</component>
