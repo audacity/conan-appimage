@@ -22,7 +22,14 @@ jobs:
       id: build-appimage
       run: |
         ./build.sh
-    - name: Upload AppImage    
+    - uses: mukunku/tag-exists-action@v1.1.0
+      id: checkTag
+      with: 
+        tag: 'v{{ env.CONAN_VERSION }}'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload AppImage
+      if: steps.checkTag.outputs.exists == 'false'
       uses: marvinpinto/action-automatic-releases@latest
       with:
         automatic_release_tag: v${{ env.CONAN_VERSION }}
