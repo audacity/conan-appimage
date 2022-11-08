@@ -12,4 +12,4 @@ version_string=${version_string#Conan version }
 echo "Conan version: ${version_string}"
 
 mv conan-appimage-x86_64.AppImage conan-${version_string}-x86_64.AppImage
-echo "conan_version=${version_string}" >> $GITHUB_OUTPUT
+echo "conan_version=${version_string}" >> $GITHUB_ENV
