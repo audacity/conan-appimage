@@ -25,7 +25,7 @@ jobs:
     - name: Upload AppImage    
       uses: marvinpinto/action-automatic-releases@latest
       with:
-        automatic_release_tag: v${{ env.conan_version }}
-        title: "Conan v${{ env.conan_version }}"
-        files: conan-v${{ env.conan_version }}-x86_64.AppImage
+        automatic_release_tag: v${{ env.CONAN_VERSION }}
+        title: "Conan v${{ env.CONAN_VERSION }}"
+        files: conan-v${{ env.CONAN_VERSION }}-x86_64.AppImage
         repo_token: ${{ secrets.GITHUB_TOKEN }}
