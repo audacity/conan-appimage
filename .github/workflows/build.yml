@@ -10,16 +10,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: awalsh128/cache-apt-pkgs-action@latest
-      with:
-        packages: libfuse2
-        version: 1.0
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
         python-version: "3.10"
     - name: Install dependencies
       run: |
+        apt update
+        apt install -y libfuse2
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Build AppImage
