@@ -27,7 +27,7 @@ jobs:
     - uses: mukunku/tag-exists-action@v1.1.0
       id: checkTag
       with: 
-        tag: 'v{{ env.CONAN_VERSION }}'
+        tag: "v${{ env.CONAN_VERSION }}"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Upload AppImage
